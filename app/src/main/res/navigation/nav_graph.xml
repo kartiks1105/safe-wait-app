@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="ca.unb.mobiledev.project.feedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" />
+    <fragment
+        android:id="@+id/car_statusFragment"
+        android:name="ca.unb.mobiledev.project.car_statusFragment"
+        android:label="fragment_car_status"
+        tools:layout="@layout/fragment_car_status" />
+    <fragment
+        android:id="@+id/qr_codeFragment"
+        android:name="ca.unb.mobiledev.project.qr_codeFragment"
+        android:label="fragment_qr_code"
+        tools:layout="@layout/fragment_qr_code" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ca.unb.mobiledev.project.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
