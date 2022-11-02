@@ -6,9 +6,39 @@
     tools:context=".profileFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="50dp"
+        android:layout_marginTop="100px"
+        android:gravity="center"
+        android:text="Student Profile"
+        android:textColor="#000000"
+        android:textSize="120px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="350px"
+        android:text="Name: "
+        android:textColor="#000000"
+        android:textSize="70px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="700px"
+        android:text="Student ID: "
+        android:textColor="#000000"
+        android:textSize="70px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1100px"
+        android:text="Address: "
+        android:textColor="#000000"
+        android:textSize="70px" />
+
 
 </FrameLayout>

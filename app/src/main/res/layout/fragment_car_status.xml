@@ -7,8 +7,55 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:text="Car Status"
+        android:textColor="#000000"
+        android:textSize="100px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400px"
+        android:text="Location 1: Student Union Building"
+        android:textColor="#000000"
+        android:textSize="50px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700px"
+        android:text="Location 2: St. Thomas University"
+        android:textColor="#000000"
+        android:textSize="50px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1000px"
+        android:text="Location 3: Richard J Currie Center"
+        android:textColor="#000000"
+        android:textSize="50px" />
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1300px"
+        android:text="Location 4: Head Hall"
+        android:textColor="#000000"
+        android:textSize="50px" />
+
+
 
 </FrameLayout>
