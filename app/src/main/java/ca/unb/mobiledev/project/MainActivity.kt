@@ -29,15 +29,19 @@ class MainActivity : AppCompatActivity() {
             button.text = ""
             button.isEnabled = false
             loading.visibility = View.VISIBLE
-//            val intent = Intent(this, MainDisplay::class.java)
-//            this.startActivity(intent)
-            verifyStudentInfo().start()
+            verifyStudentInfo(this, loading, button).start()
         }
     }
 
-    private fun verifyStudentInfo() : Thread {
+    private fun verifyStudentInfo(parentActivity: AppCompatActivity,
+                                  loading: ProgressBar, verify: Button) : Thread {
         return Thread {
-            val url = URL("http://10.0.2.2:5000/getStudentInformation?studentId=10")
+
+            var studentId = findViewById<EditText>(R.id.student_id)
+            var password = findViewById<EditText>(R.id.password)
+
+            val url = URL("http://10.0.2.2:5000/getStudentInformation?studentId="
+                    + studentId.text)
 
             with(url.openConnection() as HttpURLConnection) {
                 requestMethod = "GET"  // optional default is GET
@@ -56,15 +60,17 @@ class MainActivity : AppCompatActivity() {
                     var response = JSONObject(stringBuilder.toString())
                     var studentInformation = response.get("StudentInformation")
                     if (studentInformation.javaClass.kotlin.qualifiedName != null) {
-
+                        val intent = Intent(parentActivity, MainDisplay::class.java)
+                        parentActivity.startActivity(intent)
                     } else {
                         println("IN")
                         runOnUiThread {
                             kotlin.run {
-                                var studentId = findViewById<EditText>(R.id.student_id)
-                                var password = findViewById<EditText>(R.id.password)
                                 studentId.error = "Invalid Student Id or password"
                                 password.error = "Invalid Student Id or password"
+                                loading.visibility = View.INVISIBLE
+                                verify.isEnabled = true
+                                verify.text = "Verify"
                             }
                         }
                     }
@@ -72,18 +78,6 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: Exception) {
 
                 }
-
-
-
-//                var studentInformation = JSONObject(stringBuilder.toString()).get("StudentInformation") as JSONObject?
-//                if (studentInformation != null) {
-//                    Log.i("json", studentInformation.get("address").toString())
-//                } else {
-//                    var studentId = findViewById<EditText>(R.id.student_id)
-//                    var password = findViewById<EditText>(R.id.password)
-//                    studentId.error = "Invalid Student Id or password"
-//                    password.error = "Invalid Student Id or password"
-//                }
             }
         }
     }
