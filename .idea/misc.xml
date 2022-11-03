@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/drawable/ic_baseline_directions_car_24.xml" value="0.1" />
         <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/layout/activity_main.xml" value="0.11574074074074074" />
+        <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/layout/fragment_car_status.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/layout/fragment_profile.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/layout/fragment_qr_code.xml" value="0.2" />
         <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/layout/get_student_id.xml" value="0.25" />
         <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/menu/bottom_nav.xml" value="0.25" />
