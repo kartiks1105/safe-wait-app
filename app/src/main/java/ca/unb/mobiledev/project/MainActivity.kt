@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             var password = findViewById<EditText>(R.id.password)
 
             val url = URL("http://10.0.2.2:5000/getStudentInformation?studentId="
-                    + studentId.text)
+                    + studentId.text + "&password=" + password.text)
 
             with(url.openConnection() as HttpURLConnection) {
                 requestMethod = "GET"  // optional default is GET
@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 try {
+                    println(stringBuilder.toString())
                     var response = JSONObject(stringBuilder.toString())
                     var studentInformation = response.get("StudentInformation")
                     if (studentInformation.javaClass.kotlin.qualifiedName != null) {
