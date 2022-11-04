@@ -1,17 +1,15 @@
 package ca.unb.mobiledev.project
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import ca.unb.mobiledev.project.databinding.ActivityMainBinding
-import com.google.gson.Gson
 import org.json.JSONObject
-import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -57,14 +55,13 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 try {
-                    println(stringBuilder.toString())
                     var response = JSONObject(stringBuilder.toString())
                     var studentInformation = response.get("StudentInformation")
                     if (studentInformation.javaClass.kotlin.qualifiedName != null) {
-                        val intent = Intent(parentActivity, MainDisplay::class.java)
+                        var intent = Intent(parentActivity, MainDisplay::class.java)
+                        intent.putExtra("StudentInformation", studentInformation.toString())
                         parentActivity.startActivity(intent)
                     } else {
-                        println("IN")
                         runOnUiThread {
                             kotlin.run {
                                 studentId.error = "Invalid Student Id or password"
