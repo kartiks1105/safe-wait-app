@@ -29,6 +29,12 @@
         <activity android:name=".MainDisplay">
 
         </activity>
+        <activity android:name=".StartScreen">
+
+        </activity>
+        <activity android:name=".LoginScreen">
+
+        </activity>
     </application>
 
 </manifest>
