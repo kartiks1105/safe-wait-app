@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.project
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.widget.ImageView
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.google.zxing.qrcode.QRCodeWriter
+import org.json.JSONObject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -47,9 +49,11 @@ class qr_codeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_qr_code, container, false)
         ivQRCode = root.findViewById(R.id.idIVQrcode)
         val writer = QRCodeWriter()
-        val data = "hello"
+        val obj = activity?.intent?.extras?.getString("StudentInformation")
+        var data = JSONObject(obj).get("first_name")
+        println(data)
         try {
-            val bitMatrix = writer.encode(data, BarcodeFormat.QR_CODE, 512, 512)
+            val bitMatrix = writer.encode(data.toString(), BarcodeFormat.QR_CODE, 512, 512)
             val width = bitMatrix.width
             val height = bitMatrix.height
             val bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
