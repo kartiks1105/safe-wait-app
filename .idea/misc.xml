@@ -13,12 +13,18 @@
         <entry key="..\:/Users/shash/AndroidStudioProjects/safe-wait-app/app/src/main/res/menu/bottom_nav.xml" value="0.25" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/drawable/bg.xml" value="0.1935" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/Strings.xml" value="0.3625" />
-        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/activity_main.xml" value="0.21" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/driver_homepage.xml" value="0.33" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/driver_profile.xml" value="0.358695652173913" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/fragment_car_status.xml" value="0.2" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/fragment_feed.xml" value="0.33" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/fragment_qr_code.xml" value="0.1762917933130699" />
         <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/get_student_id.xml" value="0.13703703703703704" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/passengers_list.xml" value="0.33" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/layout/student_driver.xml" value="0.1762917933130699" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/menu/bottom_nav.xml" value="0.3625" />
+        <entry key="..\:/unb new folder/FALL2022 COURSES/CS2063/team-project/safe-wait-app/app/src/main/res/menu/driver_menu.xml" value="0.3625" />
       </map>
     </option>
   </component>
