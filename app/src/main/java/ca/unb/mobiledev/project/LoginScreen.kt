@@ -7,8 +7,15 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.Toast
 import ca.unb.mobiledev.project.databinding.ActivityMainBinding
+import com.fasterxml.jackson.databind.ObjectMapper
 import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -28,13 +35,42 @@ class LoginScreen : AppCompatActivity() {
             button.isEnabled = false
             loading.visibility = View.VISIBLE
             if (profileType == "Student") {
-                verifyStudentInfo(this, loading, button).start()
+                //verifyStudentInfo(this, loading, button).start()
+                getStudentInfo()
             } else if (profileType == "Driver") {
                 verifyDriverInfo(this, loading, button).start()
             } else {
                 throw Exception("ProfileType Mismatched")
             }
         }
+    }
+
+
+
+    private fun getStudentInfo() {
+        var studentId = findViewById<EditText>(R.id.student_id)
+        var password = findViewById<EditText>(R.id.password)
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://10.0.2.2:5000")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        val retrofitAPI = retrofit.create(API::class.java)
+        val credential = Credential(studentId.text.toString(), password.text.toString())
+        println(credential.toString())
+        val call = retrofitAPI.getStudentInformation(credential)
+        call!!.enqueue(object : Callback<Student?> {
+            override fun onResponse(call: Call<Student?>, response: Response<Student?>) {
+                val response = response.body()
+                println(response.toString())
+                Toast.makeText(applicationContext, response.toString(), Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onFailure(call: Call<Student?>?, t: Throwable) {
+                // setting text to our text view when
+                // we get error response from API.
+                Toast.makeText(applicationContext, t.message, Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun verifyStudentInfo(parentActivity: AppCompatActivity,
