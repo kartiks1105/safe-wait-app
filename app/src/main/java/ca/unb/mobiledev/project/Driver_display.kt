@@ -21,11 +21,16 @@ class Driver_display: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.driver_homepage)
-        val navHostFragmentDriver = supportFragmentManager.findFragmentById(R.id.nav_fragment_driver) as NavHostFragment
+        val navHostFragmentDriver =
+            supportFragmentManager.findFragmentById(R.id.nav_fragment_driver) as NavHostFragment
         navControllerDriver = navHostFragmentDriver.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav_driver)
         setupWithNavController(bottomNavigationView, navControllerDriver)
 
     }
 
+    fun logout(view: View) {
+        var intent = Intent(this, StartScreen::class.java)
+        this.startActivity(intent)
+    }
 }
