@@ -28,6 +28,9 @@ class MainDisplay: AppCompatActivity(){
 
     }
 
-
+    fun logout(view: View) {
+        var intent = Intent(this, StartScreen::class.java)
+        this.startActivity(intent)
+    }
 
 }
