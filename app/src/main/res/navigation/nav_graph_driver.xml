@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_driver"
+    app:startDestination="@id/passenger_detailsFragment">
+
+    <fragment
+        android:id="@+id/passenger_detailsFragment"
+        android:name="ca.unb.mobiledev.project.passenger_detailsFragment"
+        android:label="passengers_list"
+        tools:layout="@layout/passengers_list" />
+
+    <fragment
+        android:id="@+id/driver_profileFragment"
+        android:name="ca.unb.mobiledev.project.driver_profileFragment"
+        android:label="driver_profile"
+        tools:layout="@layout/driver_profile" />
+
+</navigation>

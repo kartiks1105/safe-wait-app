@@ -35,6 +35,10 @@
         <activity android:name=".LoginScreen">
 
         </activity>
+
+        <activity android:name=".Driver_display">
+
+        </activity>
     </application>
 
 </manifest>

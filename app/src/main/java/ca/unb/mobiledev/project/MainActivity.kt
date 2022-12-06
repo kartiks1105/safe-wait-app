@@ -8,7 +8,7 @@ class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val intent = Intent(this, MainDisplay::class.java)
+        val intent = Intent(this, Driver_display::class.java)
         this.startActivity(intent)
     }
 
