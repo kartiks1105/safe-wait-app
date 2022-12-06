@@ -7,20 +7,47 @@
 
     <Button
         android:id="@+id/student"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="293dp"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="452dp"
+        android:backgroundTint="@android:color/black"
         android:text="Student"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/driver"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Driver"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:text="Driver"
-        app:layout_constraintBaseline_toBaselineOf="@+id/student"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="143dp"
+        android:text="UNB SafeWait"
+        android:textColor="#EC1B1B"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/driver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
