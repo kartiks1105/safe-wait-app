@@ -49,9 +49,15 @@ class DriverDisplay: AppCompatActivity(){
                     //open new gui and show route
                     //update duration
                     var saddr = routeSequence[0]
+                    var lastAddr = routeSequence[routeSequence.size - 1]
                     routeSequence = routeSequence.toMutableList().apply {
                         removeAt(0)
                     }
+                    routeSequence = routeSequence.toMutableList().apply {
+                        removeAt(routeSequence.size - 1)
+                    }
+                    routeSequence.add(0, lastAddr)
+                    routeSequence.reverse()
                     var daddr = routeSequence.joinToString(separator = "+to:")
                     val intent = Intent(Intent.ACTION_VIEW,
                         Uri.parse("http://maps.google.com/maps?saddr=$saddr&daddr=$daddr"))
