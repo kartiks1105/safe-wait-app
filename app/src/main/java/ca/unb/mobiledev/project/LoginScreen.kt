@@ -50,14 +50,8 @@ class LoginScreen : AppCompatActivity() {
     private fun getStudentInfo() {
         var studentId = findViewById<EditText>(R.id.student_id)
         var password = findViewById<EditText>(R.id.password)
-        val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:5000")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        val retrofitAPI = retrofit.create(API::class.java)
         val credential = Credential(studentId.text.toString(), password.text.toString())
-        println(credential.toString())
-        val call = retrofitAPI.getStudentInformation(credential)
+        val call = Client().getAPI().getStudentInformation(credential)
         call!!.enqueue(object : Callback<Student?> {
             override fun onResponse(call: Call<Student?>, response: Response<Student?>) {
                 val response = response.body()
@@ -71,55 +65,6 @@ class LoginScreen : AppCompatActivity() {
                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_SHORT).show()
             }
         })
-    }
-
-    private fun verifyStudentInfo(parentActivity: AppCompatActivity,
-                                  loading: ProgressBar, verify: Button) : Thread {
-        return Thread {
-
-            var studentId = findViewById<EditText>(R.id.student_id)
-            var password = findViewById<EditText>(R.id.password)
-
-            val url = URL("http://10.0.2.2:5000/getStudentInformation?studentId="
-                    + studentId.text + "&password=" + password.text)
-
-            with(url.openConnection() as HttpURLConnection) {
-                requestMethod = "GET"  // optional default is GET
-
-                println("\nSent 'GET' request to URL : $url; Response Code : $responseCode")
-
-                val stringBuilder = StringBuilder()
-
-                inputStream.bufferedReader().use {
-                    it.lines().forEach { line ->
-                        stringBuilder.append(line)
-                    }
-                }
-
-                try {
-                    var response = JSONObject(stringBuilder.toString())
-                    var studentInformation = response.get("StudentInformation")
-                    if (studentInformation.javaClass.kotlin.qualifiedName != null) {
-                        var intent = Intent(parentActivity, MainDisplay::class.java)
-                        intent.putExtra("StudentInformation", studentInformation.toString())
-                        parentActivity.startActivity(intent)
-                    } else {
-                        runOnUiThread {
-                            kotlin.run {
-                                studentId.error = "Invalid Student Id or password"
-                                password.error = "Invalid Student Id or password"
-                                loading.visibility = View.INVISIBLE
-                                verify.isEnabled = true
-                                verify.text = "Verify"
-                            }
-                        }
-                    }
-
-                } catch (e: Exception) {
-
-                }
-            }
-        }
     }
 
     private fun verifyDriverInfo(parentActivity: AppCompatActivity,
