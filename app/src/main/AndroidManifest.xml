@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainDisplay">
+        <activity android:name=".StudentDisplay">
 
         </activity>
         <activity android:name=".StartScreen">
@@ -36,7 +36,7 @@
 
         </activity>
 
-        <activity android:name=".Driver_display">
+        <activity android:name=".DriverDisplay">
 
         </activity>
     </application>

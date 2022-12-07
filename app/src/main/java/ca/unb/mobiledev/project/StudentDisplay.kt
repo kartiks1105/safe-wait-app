@@ -14,7 +14,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainDisplay: AppCompatActivity(){
+class StudentDisplay: AppCompatActivity(){
 
     lateinit var navController: NavController
 
