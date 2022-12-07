@@ -43,10 +43,16 @@ class ProfileFragment : Fragment() {
         var firstName = intent?.getStringExtra("firstName")
         var middleName = intent?.getStringExtra("middleName")
         var lastName = intent?.getStringExtra("lastName")
+        var id = intent?.getStringExtra("studentId")
+        id = "#$id"
         var name = "$firstName $middleName $lastName"
         var nameTextView = activity?.findViewById<TextView>(R.id.name)
+        var idTextView = activity?.findViewById<TextView>(R.id.id)
         if (nameTextView != null) {
             nameTextView.text = name
+        }
+        if (idTextView != null) {
+            idTextView.text = id
         }
     }
 
