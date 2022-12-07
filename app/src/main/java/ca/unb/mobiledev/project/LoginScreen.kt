@@ -69,6 +69,7 @@ class LoginScreen : AppCompatActivity() {
                     progressBar.visibility = View.INVISIBLE
                     var verify = findViewById<Button>(R.id.verify)
                     verify.text = "VERIFY"
+                    verify.isEnabled = true
                 }
             }
 
@@ -98,6 +99,7 @@ class LoginScreen : AppCompatActivity() {
                     progressBar.visibility = View.INVISIBLE
                     var verify = findViewById<Button>(R.id.verify)
                     verify.text = "VERIFY"
+                    verify.isEnabled = true
                 }
             }
 
