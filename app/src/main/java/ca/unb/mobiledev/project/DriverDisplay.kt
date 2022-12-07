@@ -1,6 +1,7 @@
 package ca.unb.mobiledev.project
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -43,11 +44,18 @@ class DriverDisplay: AppCompatActivity(){
                 if (invalidPosition != -1) {
                     routesEditTextView[invalidPosition!!].error = "invalid address"
                 } else {
-                    val routeSequence = response.body()!!.route
+                    var routeSequence = response.body()!!.route
                     val duration = response.body()!!.duration
-                    println(response.body())
                     //open new gui and show route
                     //update duration
+                    var saddr = routeSequence[0]
+                    routeSequence = routeSequence.toMutableList().apply {
+                        removeAt(0)
+                    }
+                    var daddr = routeSequence.joinToString(separator = "+to:")
+                    val intent = Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://maps.google.com/maps?saddr=$saddr&daddr=$daddr"))
+                    this@DriverDisplay.startActivity(intent)
                 }
             }
 
