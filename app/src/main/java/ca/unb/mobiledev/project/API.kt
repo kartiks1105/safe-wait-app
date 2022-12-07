@@ -13,4 +13,7 @@ interface API {
 
     @POST("getPredictions")
     fun getPredictions(@Body place: Place): Call<Predictions?>?
+
+    @POST("getBestRoute")
+    fun getBestRoute(@Body addresses: Addresses): Call<RouteInfo?>?
 }
