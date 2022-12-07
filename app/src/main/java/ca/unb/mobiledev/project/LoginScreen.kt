@@ -58,6 +58,9 @@ class LoginScreen : AppCompatActivity() {
                 if (studentInformation?.student_id != null) {
                     var intent = Intent(this@LoginScreen, MainDisplay::class.java)
                     this@LoginScreen.startActivity(intent)
+                } else {
+                    studentId.error = ("incorrect student id or password")
+                    password.error = ("incorrect student id or password")
                 }
             }
 
