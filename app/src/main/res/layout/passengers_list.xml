@@ -36,142 +36,150 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="52dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="182dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="22dp"
         android:layout_marginBottom="276dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toStartOf="@+id/p1"
+        app:layout_constraintEnd_toStartOf="@+id/route1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_perm_identity" />
 
-    <TextView
-        android:id="@+id/p1"
+    <EditText
+        android:id="@+id/route1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="9dp"
-        android:text="Tokyo Ramen"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        android:layout_height="0dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/route2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="52dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="397dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/p2"
+        app:layout_constraintEnd_toStartOf="@+id/route2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.583"
         app:srcCompat="@drawable/ic_perm_identity" />
 
-    <TextView
-        android:id="@+id/p2"
+    <EditText
+        android:id="@+id/route2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Moco Downtown"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        android:layout_height="0dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/route3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4" />
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/route1" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="52dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="22dp"
         android:layout_marginBottom="340dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/p3"
+        app:layout_constraintEnd_toStartOf="@+id/route3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_perm_identity" />
 
-    <TextView
-        android:id="@+id/p3"
+    <EditText
+        android:id="@+id/route3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Regent Mall"
-        android:textSize="24sp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/route4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/route2" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="52dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="22dp"
         android:layout_marginBottom="255dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/p4"
+        app:layout_constraintEnd_toStartOf="@+id/route4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_perm_identity" />
 
-    <TextView
-        android:id="@+id/p4"
+    <EditText
+        android:id="@+id/route4"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Costco"
-        android:textSize="24sp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/route5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/route3" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="52dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="169dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintEnd_toStartOf="@+id/p5"
+        app:layout_constraintEnd_toStartOf="@+id/route5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@drawable/ic_perm_identity" />
 
-    <TextView
-        android:id="@+id/p5"
+    <EditText
+        android:id="@+id/route5"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="Boston Pizza"
-        android:textSize="24sp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="171dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/route4" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startRide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="74dp"
-        android:text="Start Ride"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="56dp"
         android:backgroundTint="@android:color/black"
+        android:onClick="startRide"
+        android:text="Start Ride"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/p5" />
+        app:layout_constraintStart_toStartOf="@+id/route5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

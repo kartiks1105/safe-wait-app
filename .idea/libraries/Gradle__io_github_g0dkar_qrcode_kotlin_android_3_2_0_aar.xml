@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.g0dkar:qrcode-kotlin-android:3.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fb818999c9676be15cf79f72a883c521/transformed/qrcode-kotlin-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fb818999c9676be15cf79f72a883c521/transformed/qrcode-kotlin-release/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fb818999c9676be15cf79f72a883c521/transformed/qrcode-kotlin-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.g0dkar/qrcode-kotlin-android/3.2.0/b30331b79b2bd26a88df190fa81a5d29c1a091ab/qrcode-kotlin-android-3.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.g0dkar/qrcode-kotlin-android/3.2.0/a972969bde8a9d54dd5505bf2e4eaffc35fb4b4b/qrcode-kotlin-android-3.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
