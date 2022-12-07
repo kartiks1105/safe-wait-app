@@ -61,6 +61,8 @@ class LoginScreen : AppCompatActivity() {
                 val studentInformation = response.body()?.studentInformation
                 if (studentInformation?.student_id != null) {
                     var intent = Intent(this@LoginScreen, StudentDisplay::class.java)
+                    intent.putExtra("studentId", studentInformation.student_id)
+                    intent.putExtra("firstName", studentInformation.first_name)
                     this@LoginScreen.startActivity(intent)
                 } else {
                     studentId.error = ("incorrect student id or password")

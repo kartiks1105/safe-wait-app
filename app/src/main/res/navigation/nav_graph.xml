@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_qr_code" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="ca.unb.mobiledev.project.profileFragment"
+        android:name="ca.unb.mobiledev.project.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
