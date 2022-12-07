@@ -3,6 +3,7 @@ package ca.unb.mobiledev.project
 import com.google.gson.annotations.SerializedName
 
 data class StudentInformation(
+
     @SerializedName("student_id")
     var student_id: String,
     @SerializedName("first_name")

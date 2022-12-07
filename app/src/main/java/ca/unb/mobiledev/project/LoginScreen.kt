@@ -54,9 +54,11 @@ class LoginScreen : AppCompatActivity() {
         val call = Client().getAPI().getStudentInformation(credential)
         call!!.enqueue(object : Callback<Student?> {
             override fun onResponse(call: Call<Student?>, response: Response<Student?>) {
-                val response = response.body()
-                println(response.toString())
-                Toast.makeText(applicationContext, response.toString(), Toast.LENGTH_SHORT).show()
+                val studentInformation = response.body()?.studentInformation
+                if (studentInformation?.student_id != null) {
+                    var intent = Intent(this@LoginScreen, MainDisplay::class.java)
+                    this@LoginScreen.startActivity(intent)
+                }
             }
 
             override fun onFailure(call: Call<Student?>?, t: Throwable) {
