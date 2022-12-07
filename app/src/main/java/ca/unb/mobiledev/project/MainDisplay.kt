@@ -25,6 +25,8 @@ class MainDisplay: AppCompatActivity(){
         navController = navHostFragment.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigatin_view)
         setupWithNavController(bottomNavigationView, navController)
+        var bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigatin_view)
+        bottomNav.selectedItemId = R.id.car_statusFragment
 
     }
 
