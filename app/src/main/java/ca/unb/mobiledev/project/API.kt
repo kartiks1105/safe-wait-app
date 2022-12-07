@@ -10,4 +10,7 @@ interface API {
 
     @POST("getDriverInformation")
     fun getDriverInformation(@Body credential: Credential): Call<Driver?>?
+
+    @POST("getPredictions")
+    fun getPredictions(@Body place: Place): Call<Predictions?>?
 }
