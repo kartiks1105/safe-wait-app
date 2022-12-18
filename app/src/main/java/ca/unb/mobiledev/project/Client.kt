@@ -9,7 +9,7 @@ class Client {
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:5000")
+            .baseUrl("https://ad66-156-34-88-21.ngrok.io")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val retrofitAPI = retrofit.create(API::class.java)
